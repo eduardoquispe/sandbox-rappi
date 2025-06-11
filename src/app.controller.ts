@@ -11,7 +11,7 @@ export class AppController {
   sandbox(@Body() body: Record<string, any>) {
     this.logger.log('get');
 
-    this.logger.log({ body });
+    this.logger.log({ body: JSON.stringify(body) });
 
     return this.appService.getHello();
   }
